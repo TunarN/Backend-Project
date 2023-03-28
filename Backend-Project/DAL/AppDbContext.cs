@@ -9,6 +9,8 @@ namespace Backend_Project.DAL
         {
         }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Notice> Notices { get; set; }
+        public DbSet<EduHome> EduHomes { get; set; }
 
     }
 }
