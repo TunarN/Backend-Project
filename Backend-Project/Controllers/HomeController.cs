@@ -1,4 +1,6 @@
-﻿using Backend_Project.Models;
+﻿using Backend_Project.DAL;
+using Backend_Project.Models;
+using Backend_Project.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,27 +8,21 @@ namespace Backend_Project.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _appDbContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext appDbContext)
         {
-            _logger = logger;
+            _appDbContext = appDbContext;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomeVM homeVM = new HomeVM();
+            homeVM.Sliders = _appDbContext.Sliders.ToList();
+            return View(homeVM);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+
     }
 }

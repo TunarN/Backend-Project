@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\Desktop\\BACK\\Backend-Project\\Backend-Project\\Backend-Project.csproj": {}
+    "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\Backend-Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\Desktop\\BACK\\Backend-Project\\Backend-Project\\Backend-Project.csproj": {
+    "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\Backend-Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\BACK\\Backend-Project\\Backend-Project\\Backend-Project.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\Backend-Project.csproj",
         "projectName": "Backend-Project",
-        "projectPath": "C:\\Users\\lenovo\\Desktop\\BACK\\Backend-Project\\Backend-Project\\Backend-Project.csproj",
+        "projectPath": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\Backend-Project.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\Desktop\\BACK\\Backend-Project\\Backend-Project\\obj\\",
+        "outputPath": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,32 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
