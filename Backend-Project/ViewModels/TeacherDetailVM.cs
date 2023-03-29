@@ -1,8 +1,9 @@
-﻿namespace Backend_Project.Models
+﻿using Backend_Project.Models;
+
+namespace Backend_Project.ViewModels
 {
-    public class Teacher
+    public class TeacherDetailVM
     {
-        public int Id { get; set; }
         public string ImageUrl { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -15,9 +16,14 @@
         public string Experience { get; set; }
         public string Hobbies { get; set; }
         public string Faculty { get; set; }
-        public int SkillsId { get; set; }
-        public Skills? Skills { get; set; }
-        public int ContactId { get; set; }
-        public Contact Contact { get; set; }
+        public string Mail { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Skype { get; set; }
+        public int PercentLanguage { get; set; }
+        public int PercentTeamLeader { get; set; }
+        public int PercentDevelopment { get; set; }
+        public int PercentDesign { get; set; }
+        public int PercentInnovation { get; set; }
+        public int PercentComminication { get; set; }
     }
 }

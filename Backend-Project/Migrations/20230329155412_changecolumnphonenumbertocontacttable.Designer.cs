@@ -4,6 +4,7 @@ using Backend_Project.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_Project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230329155412_changecolumnphonenumbertocontacttable")]
+    partial class changecolumnphonenumbertocontacttable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,15 +69,16 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Skype")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("Contacts");
                 });
@@ -163,7 +166,12 @@ namespace Backend_Project.Migrations
                     b.Property<int>("PercentTeamLeader")
                         .HasColumnType("int");
 
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("Skills");
                 });
@@ -230,9 +238,6 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ContactId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Degree")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -269,9 +274,6 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SkillsId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Twitter")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -282,30 +284,29 @@ namespace Backend_Project.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ContactId");
-
-                    b.HasIndex("SkillsId");
-
                     b.ToTable("Teachers");
                 });
 
-            modelBuilder.Entity("Backend_Project.Models.Teacher", b =>
+            modelBuilder.Entity("Backend_Project.Models.Contact", b =>
                 {
-                    b.HasOne("Backend_Project.Models.Contact", "Contact")
+                    b.HasOne("Backend_Project.Models.Teacher", "Teacher")
                         .WithMany()
-                        .HasForeignKey("ContactId")
+                        .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Backend_Project.Models.Skills", "Skills")
+                    b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("Backend_Project.Models.Skills", b =>
+                {
+                    b.HasOne("Backend_Project.Models.Teacher", "Teacher")
                         .WithMany()
-                        .HasForeignKey("SkillsId")
+                        .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Contact");
-
-                    b.Navigation("Skills");
+                    b.Navigation("Teacher");
                 });
 #pragma warning restore 612, 618
         }

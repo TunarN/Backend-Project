@@ -4,6 +4,7 @@ using Backend_Project.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_Project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230329154411_addAboutMeDegreeExperienceHobbieFacultyColumnToTeacherTable")]
+    partial class addAboutMeDegreeExperienceHobbieFacultyColumnToTeacherTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,31 +55,6 @@ namespace Backend_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Bios");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.Contact", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Mail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Skype")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("Backend_Project.Models.EduHome", b =>
@@ -135,37 +112,6 @@ namespace Backend_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Notices");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.Skills", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("PercentComminication")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PercentDesign")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PercentDevelopment")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PercentInnovation")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PercentLanguage")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PercentTeamLeader")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("Backend_Project.Models.Slider", b =>
@@ -230,9 +176,6 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ContactId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Degree")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -269,9 +212,6 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SkillsId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Twitter")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -282,30 +222,7 @@ namespace Backend_Project.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ContactId");
-
-                    b.HasIndex("SkillsId");
-
                     b.ToTable("Teachers");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.Teacher", b =>
-                {
-                    b.HasOne("Backend_Project.Models.Contact", "Contact")
-                        .WithMany()
-                        .HasForeignKey("ContactId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Backend_Project.Models.Skills", "Skills")
-                        .WithMany()
-                        .HasForeignKey("SkillsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Contact");
-
-                    b.Navigation("Skills");
                 });
 #pragma warning restore 612, 618
         }
