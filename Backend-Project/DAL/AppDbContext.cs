@@ -15,5 +15,8 @@ namespace Backend_Project.DAL
         public DbSet<Bio> Bios { get; set; }
         public DbSet<Student> Students { get; set; }
 
+        public DbSet<Teacher> Teachers { get; set; }
+
+
     }
 }
