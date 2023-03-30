@@ -21,6 +21,8 @@ namespace Backend_Project.DAL
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
 
 
     }
