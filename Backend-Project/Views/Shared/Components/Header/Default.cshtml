@@ -30,8 +30,8 @@
                                     <li>
                                         <a asp-controller="Course" asp-action="Index">courses</a>
                                         <ul>
-                                            <li><a href="course.html">courses</a></li>
-                                            <li><a href="course-details.html">courses details</a></li>
+                                            <li><a asp-controller ="Course" asp-action="Index">courses</a></li>
+                                            <li><a asp-controller="" asp-action="Index">courses details</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -46,8 +46,8 @@
                                     <li class="hidden-sm">
                                         <a asp-controller="Teacher" asp-action="Index">teacher</a>
                                         <ul>
-                                            <li><a href="teacher.html">teacher</a></li>
-                                            <li><a href="teacher-details.html">teacher details</a></li>
+                                            <li><a asp-controller="Teacher" asp-action="Index">teacher</a></li>
+                                            <li><a asp-controller="TeacherDetail" asp-action="Index">teacher details</a></li>
                                         </ul>
                                     </li>
                                     <li>

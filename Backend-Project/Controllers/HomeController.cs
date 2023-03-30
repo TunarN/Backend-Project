@@ -21,6 +21,7 @@ namespace Backend_Project.Controllers
             homeVM.Sliders = _appDbContext.Sliders.ToList();
             homeVM.Notices = _appDbContext.Notices.ToList();
             homeVM.EduHomes = _appDbContext.EduHomes.ToList();
+            homeVM.Courses = _appDbContext.Courses.Take(3).ToList();
             return View(homeVM);
         }
 

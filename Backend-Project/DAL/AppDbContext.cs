@@ -19,6 +19,9 @@ namespace Backend_Project.DAL
         public DbSet<Skills> Skills { get; set; }
         public DbSet<Contact> Contacts { get; set; }
 
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
 
     }
 }
