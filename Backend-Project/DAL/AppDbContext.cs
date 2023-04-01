@@ -23,6 +23,9 @@ namespace Backend_Project.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Speaker> Speakers { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<EventSpeaker> EventSpeakers { get; set; }
 
 
     }
