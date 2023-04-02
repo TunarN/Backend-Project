@@ -1,0 +1,47 @@
+﻿@model Course
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <img src="~/img/course/@Model.ImageUrl" width="100" height="100" />
+                        <p>@Model.Name</p>
+                        <p>@Model.NameDesc</p>
+                           <p>StartDate</p>
+                         <p>@Model.StartDate.ToString("dddd, dd MMMM yyyy")</p>
+                          <p>Month</p>
+                         <p>@Model.Month month</p>
+                          <p>DurationHour hour</p>
+                         <p>@Model.DurationHour</p>
+                          <p>SkillLevel</p>
+                         <p>@Model.SkillLevel</p>
+                          <p>Language</p>
+                         <p>@Model.Language</p>
+                          <p>StudentCount</p>
+                         <p>@Model.StudentsCount</p>
+                          <p>Assesment</p>
+                         <p>@Model.Assesment</p>
+                          <p>Fee</p>
+                         <p>@Model.Fee $</p>
+                          <p>CourseDescription</p>
+                         <p>@Model.CourseDesc</p>
+                          <p>AboutCourse</p>
+                         <p>@Model.AboutCourse</p>
+                          <p>Apply</p>
+                         <p>@Model.Apply</p>
+                          <p>Certification</p>
+                         <p>@Model.Certification</p>
+                          <p>CategoryName</p>
+                        <p>@Model.Category.CategoryName</p>
+                         <p>CategoryDescription</p>
+                         <p>@Model.Category.CategoryDescription</p>
+                        <a asp-action="Index" class="btn btn-dark">BACK</a>
+                      </div>
+                    </div>
+                  </div>
+    </div>
+</div
