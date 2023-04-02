@@ -3745,6 +3745,14 @@
       "PackagePath": "staticwebassets\\fonts\\ionicons28b5.woff"
     },
     {
+      "Id": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\5dad55f2-4fc9-4d0a-88f7-0f72b280fd74home.png",
+      "PackagePath": "staticwebassets\\img\\5dad55f2-4fc9-4d0a-88f7-0f72b280fd74home.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\7999b40c-038a-4884-8273-8e4726bc1229home.png",
+      "PackagePath": "staticwebassets\\img\\7999b40c-038a-4884-8273-8e4726bc1229home.png"
+    },
+    {
       "Id": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\about\\about.png",
       "PackagePath": "staticwebassets\\img\\about\\about.png"
     },
@@ -3971,6 +3979,10 @@
     {
       "Id": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\post\\post3.jpg",
       "PackagePath": "staticwebassets\\img\\post\\post3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\slider\\a8151e67-17e0-4e6c-aa54-8f702a50ad86blog-feature-img-4.jpg",
+      "PackagePath": "staticwebassets\\img\\slider\\a8151e67-17e0-4e6c-aa54-8f702a50ad86blog-feature-img-4.jpg"
     },
     {
       "Id": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\slider\\home.png",

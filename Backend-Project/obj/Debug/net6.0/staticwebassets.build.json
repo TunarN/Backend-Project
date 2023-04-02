@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7MWvkJfxaXKvCSe99m5or9O2mpvYqczwy+CNd/Qkg+c=",
+  "Hash": "XZw+wMlLjt6zVUMOSHbIr7hE7fVF8ajjfRDx1bX+T7g=",
   "Source": "Backend-Project",
   "BasePath": "_content/Backend-Project",
   "Mode": "Default",
@@ -15946,6 +15946,40 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Material-Design-Iconic-Fontd1f1.woff2"
     },
     {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\5dad55f2-4fc9-4d0a-88f7-0f72b280fd74home.png",
+      "SourceId": "Backend-Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\",
+      "BasePath": "_content/Backend-Project",
+      "RelativePath": "img/5dad55f2-4fc9-4d0a-88f7-0f72b280fd74home.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\5dad55f2-4fc9-4d0a-88f7-0f72b280fd74home.png"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\7999b40c-038a-4884-8273-8e4726bc1229home.png",
+      "SourceId": "Backend-Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\",
+      "BasePath": "_content/Backend-Project",
+      "RelativePath": "img/7999b40c-038a-4884-8273-8e4726bc1229home.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\7999b40c-038a-4884-8273-8e4726bc1229home.png"
+    },
+    {
       "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\about\\about.png",
       "SourceId": "Backend-Project",
       "SourceType": "Discovered",
@@ -16913,6 +16947,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\post\\post3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\slider\\a8151e67-17e0-4e6c-aa54-8f702a50ad86blog-feature-img-4.jpg",
+      "SourceId": "Backend-Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\",
+      "BasePath": "_content/Backend-Project",
+      "RelativePath": "img/slider/a8151e67-17e0-4e6c-aa54-8f702a50ad86blog-feature-img-4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\slider\\a8151e67-17e0-4e6c-aa54-8f702a50ad86blog-feature-img-4.jpg"
     },
     {
       "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\slider\\home.png",
