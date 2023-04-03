@@ -1,0 +1,46 @@
+﻿@model BlogCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description"> Create Categor Form </p>
+                    <form method="post" class="forms-sample" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="Photo"></label>
+                            <input asp-for="Photo" class="form-control" placeholder="Name">
+                            <span class="text-danger" asp-validation-for="Photo"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="BlogTitle"></label>
+                            <input asp-for="BlogTitle" class="form-control" placeholder="Title">
+                            <span class="text-danger" asp-validation-for="BlogTitle"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="BlogDesc"></label>
+                            <input asp-for="BlogDesc" class="form-control" placeholder="Description">
+                            <span class="text-danger" asp-validation-for="BlogDesc"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateTime"></label>
+                            <input asp-for="DateTime" class="form-control" placeholder="DateTime">
+                            <span class="text-danger" asp-validation-for="DateTime"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-dark">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial"></partial>
+}
+
+
