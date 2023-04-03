@@ -1,0 +1,101 @@
+﻿@model TeacherCreateVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Create Course</h4>
+                    <p class="card-description"> Create Categor Form </p>
+                    <form method="post" class="forms-sample" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control" placeholder="Name">
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description"></label>
+                            <input asp-for="Description" class="form-control" placeholder="Description">
+                            <span class="text-danger" asp-validation-for="Description"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Facebook"></label>
+                            <input asp-for="Facebook" class="form-control" placeholder="Facebook">
+                            <span class="text-danger" asp-validation-for="Facebook"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Pinterest"></label>
+                            <input asp-for="Pinterest" class="form-control" placeholder="Pinterest">
+                            <span class="text-danger" asp-validation-for="Pinterest"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Twitter"></label>
+                            <input asp-for="Twitter" class="form-control" placeholder="Twitter">
+                            <span class="text-danger" asp-validation-for="Twitter"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Vimeo"></label>
+                            <input asp-for="Vimeo" class="form-control" placeholder="Vimeo">
+                            <span class="text-danger" asp-validation-for="Vimeo"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AboutMe"></label>
+                            <input asp-for="AboutMe" class="form-control" placeholder="AboutMe">
+                            <span class="text-danger" asp-validation-for="AboutMe"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Degree"></label>
+                            <input asp-for="Degree" class="form-control" placeholder="Degree">
+                            <span class="text-danger" asp-validation-for="Degree"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Experience"></label>
+                            <input asp-for="Experience" class="form-control" placeholder="Experience">
+                            <span class="text-danger" asp-validation-for="Experience"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Hobbies"></label>
+                            <input asp-for="Hobbies" class="form-control" placeholder="Hobbies">
+                            <span class="text-danger" asp-validation-for="Hobbies"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Faculty"></label>
+                            <input asp-for="Faculty" class="form-control" placeholder="Faculty">
+                            <span class="text-danger" asp-validation-for="Faculty"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Photo"></label>
+                            <input asp-for="Photo" class="form-control" placeholder="Photos">
+                            <span class="text-danger" asp-validation-for="Photo"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ContactId"></label>
+                            <select asp-for="ContactId" asp-items="ViewBag.Contact" class="form-select" aria-label="Default select example">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SkillsId"></label>
+                            <select asp-for="SkillsId" asp-items="ViewBag.Skills" class="form-select" aria-label="Default select example">
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-dark">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial"></partial>
+}
+
+
+

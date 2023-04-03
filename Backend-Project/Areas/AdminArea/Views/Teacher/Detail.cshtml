@@ -1,0 +1,45 @@
+﻿@model Teacher
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <img src="~/img/teacher/@Model.ImageUrl" width="100" height="100" />
+                        <p>@Model.Name</p>
+                        <p>@Model.Description</p>
+                           <p>Facebook</p>
+                         <p>@Model.Facebook</p>
+                          <p>Pinterest</p>
+                         <p>@Model.Pinterest month</p>
+                          <p>Vimeo</p>
+                         <p>@Model.Vimeo</p>
+                          <p>Twitter</p>
+                         <p>@Model.Twitter</p>
+                          <p>About Teacher</p>
+                         <p>@Model.AboutMe</p>
+                          <p>Degree</p>
+                         <p>@Model.Degree</p>
+                          <p>Experience</p>
+                         <p>@Model.Experience</p>
+                          <p>Hobbie</p>
+                         <p>@Model.Hobbies $</p>
+                          <p>Faculty</p>
+                         <p>@Model.Faculty</p>
+                          <p>AboutCourse</p>
+                          <p>Contact Mail</p>
+                        <p>@Model.Contact.Mail</p>
+                         <p>Contact Number</p>
+                         <p>@Model.Contact.PhoneNumber</p>
+                          <p>Skype</p>
+                         <p>@Model.Contact.Skype</p>
+                        <a asp-action="Index" class="btn btn-dark">BACK</a>
+                      </div>
+                    </div>
+                  </div>
+    </div>
+</div

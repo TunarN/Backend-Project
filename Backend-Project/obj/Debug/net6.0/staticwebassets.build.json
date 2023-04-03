@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eWvVDFeamsbxIrECEEGlXwWxM8nA7eIVNUG8Mb9La2Y=",
+  "Hash": "NO/EhBYDNEjSHjandw/M9jBD3uQTPV8CFxkq+rZpr3Y=",
   "Source": "Backend-Project",
   "BasePath": "_content/Backend-Project",
   "Mode": "Default",
@@ -16284,6 +16284,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\contact\\contact3.png"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\course\\11aac746-da50-46a9-ba92-adb26731fa19h3-team-img-2.png",
+      "SourceId": "Backend-Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\",
+      "BasePath": "_content/Backend-Project",
+      "RelativePath": "img/course/11aac746-da50-46a9-ba92-adb26731fa19h3-team-img-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\course\\11aac746-da50-46a9-ba92-adb26731fa19h3-team-img-2.png"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\course\\1b27e9a2-2b43-4e8d-9a94-61dec0cb8eaeh3-team-img-2.png",
+      "SourceId": "Backend-Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\",
+      "BasePath": "_content/Backend-Project",
+      "RelativePath": "img/course/1b27e9a2-2b43-4e8d-9a94-61dec0cb8eaeh3-team-img-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\course\\1b27e9a2-2b43-4e8d-9a94-61dec0cb8eaeh3-team-img-2.png"
     },
     {
       "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\img\\course\\course1.jpg",

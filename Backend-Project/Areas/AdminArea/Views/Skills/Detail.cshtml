@@ -1,0 +1,23 @@
+﻿@model Skills
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title"> Language @Model.PercentLanguage</h4>
+                        <p> TeamLeader @Model.PercentTeamLeader</p>
+                         <p> Comminication @Model.PercentComminication</p>
+                          <p> Development @Model.PercentDevelopment</p>
+                           <p>Innovation @Model.PercentInnovation</p>
+                            <p>Design @Model.PercentDesign</p>
+                        <a asp-action="Index" class="btn btn-dark">BACK</a>
+                      </div>
+                    </div>
+                  </div>
+    </div>
+</div

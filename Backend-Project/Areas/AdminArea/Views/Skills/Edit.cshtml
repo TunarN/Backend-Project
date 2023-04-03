@@ -1,0 +1,52 @@
+﻿@model SkillUpdateVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description"> Create Categor Form </p>
+                    <form method="post" class="forms-sample">
+                        <div class="form-group">
+                            <label asp-for="PercentLanguage"></label>
+                            <input asp-for="PercentLanguage" class="form-control" placeholder="Language">
+                            <span class="text-danger" asp-validation-for="PercentLanguage"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PercentTeamLeader"></label>
+                            <input asp-for="PercentTeamLeader" class="form-control" placeholder="PercentTeamLeader">
+                            <span class="text-danger" asp-validation-for="PercentTeamLeader"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PercentComminication"></label>
+                            <input asp-for="PercentComminication" class="form-control" placeholder="PercentComminication">
+                            <span class="text-danger" asp-validation-for="PercentComminication"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PercentDesign"></label>
+                            <input asp-for="PercentDesign" class="form-control" placeholder="PercentDesign">
+                            <span class="text-danger" asp-validation-for="PercentDesign"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PercentDevelopment"></label>
+                            <input asp-for="PercentDevelopment" class="form-control" placeholder="PercentDevelopment">
+                            <span class="text-danger" asp-validation-for="PercentDevelopment"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PercentInnovation"></label>
+                            <input asp-for="PercentInnovation" class="form-control" placeholder="PercentInnovation">
+                            <span class="text-danger" asp-validation-for="PercentInnovation"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-dark">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
