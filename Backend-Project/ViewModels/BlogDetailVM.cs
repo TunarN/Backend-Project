@@ -1,4 +1,6 @@
-﻿namespace Backend_Project.ViewModels
+﻿using Backend_Project.Models;
+
+namespace Backend_Project.ViewModels
 {
     public class BlogDetailVM
     {
@@ -9,5 +11,7 @@
         public string Message { get; set; }
         public DateTime CreatedDate { get; set; }
         public List<string> CategoryNames { get; set; }
+        public Blog Blog { get; set; }
+        public List<Blog> Blogs { get; set; }
     }
 }

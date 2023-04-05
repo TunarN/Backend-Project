@@ -1,4 +1,6 @@
-﻿namespace Backend_Project.ViewModels
+﻿using Backend_Project.Models;
+
+namespace Backend_Project.ViewModels
 {
     public class EventDetailVM
     {
@@ -14,6 +16,7 @@
         public string Venue { get; set; }
         public string EventDesc { get; set; }
 
+        public List<EventSpeaker>? EventSpeakers { get; set; }
         public List<string> CategoryNames { get; set; }
     }
 }

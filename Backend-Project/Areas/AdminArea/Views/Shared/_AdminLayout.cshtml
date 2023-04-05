@@ -39,7 +39,7 @@
                                 <span class="count bg-success"></span>
                             </div>
                             <div class="profile-name">
-                                <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
+                                <h5 class="mb-0 font-weight-normal">@User.Identity.Name</h5>
                                 <span>Gold Member</span>
                             </div>
                         </div>
@@ -143,6 +143,24 @@
                             <i class="mdi mdi-speedometer"></i>
                         </span>
                         <span class="menu-title">Skills</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" asp-area="adminarea" asp-controller="Role" asp-action="index">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Role</span>
+                    </a>
+                </li>
+
+                <li class="nav-item menu-items">
+                    <a class="nav-link" asp-area="adminarea" asp-controller="User" asp-action="index">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">User</span>
                     </a>
                 </li>
                 
@@ -330,8 +348,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                                 <div class="navbar-profile">
-                                    <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
-                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                                    <img class="img-xs rounded-circle" src="~/admin/assets/images/faces/face15.jpg" alt="">
+                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">@User.Identity.Name</p>
                                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                                 </div>
                             </a>
@@ -349,14 +367,14 @@
                                     </div>
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
+                                <a asp-controller="Dashboard" asp-action="Logout" class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
                                         <div class="preview-icon bg-dark rounded-circle">
                                             <i class="mdi mdi-logout text-danger"></i>
                                         </div>
                                     </div>
                                     <div class="preview-item-content">
-                                        <p class="preview-subject mb-1">Log out</p>
+                                        <a asp-controller="Dashboard" asp-action="Logout" class="preview-subject mb-1">Log out</a>
                                     </div>
                                 </a>
                                 <div class="dropdown-divider"></div>
