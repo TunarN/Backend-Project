@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NO/EhBYDNEjSHjandw/M9jBD3uQTPV8CFxkq+rZpr3Y=",
+  "Hash": "Z/Sxc78O3FsM8XzBDlQ/ZhpgdS8mZLQ86yYpeWIFXNc=",
   "Source": "Backend-Project",
   "BasePath": "_content/Backend-Project",
   "Mode": "Default",
@@ -18477,6 +18477,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\Template\\Verify.html",
+      "SourceId": "Backend-Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\BackEnd\\Backend-Project\\wwwroot\\",
+      "BasePath": "_content/Backend-Project",
+      "RelativePath": "Template/Verify.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Template\\Verify.html"
     }
   ]
 }
