@@ -16,6 +16,7 @@ namespace Backend_Project.ViewModels
         public string Venue { get; set; }
         public string EventDesc { get; set; }
 
+    public Event even { get; set; }
         public List<EventSpeaker>? EventSpeakers { get; set; }
         public List<string> CategoryNames { get; set; }
     }

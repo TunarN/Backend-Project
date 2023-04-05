@@ -43,24 +43,19 @@
                         <p>@Model.EventDesc</p>
                         <div class="speakers-area fix">
                             <h4>speakers</h4>
-                            <div class="single-speaker">
-                                <div class="speaker-img">
-                                    <img src="~/img/event/speaker1.jpg" alt="speaker">
+                            @foreach (var item in Model.even.EventSpeakers)
+                            {
+
+                                <div class="single-speaker">
+                                    <div class="speaker-img">
+                                        <img src="~/img/event/@item.Speakar.ImageUrl" alt="speaker">
+                                    </div>
+                                    <div class="speaker-name">
+                                        <h5>@item.Speakar.Name</h5>
+                                        <p>@item.Speakar.Position @item.Speakar.Company </p>
+                                    </div>
                                 </div>
-                                <div class="speaker-name">
-                                    <h5>Anthony Smith</h5>
-                                    <p>CEO, Hastech </p>
-                                </div>
-                            </div>
-                            <div class="single-speaker">
-                                <div class="speaker-img">
-                                    <img src="~/img/event/speaker2.jpg" alt="speaker">
-                                </div>
-                                <div class="speaker-name">
-                                    <h5>Lucy Rose</h5>
-                                    <p>Developer, STD </p>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                     <div class="reply-area">

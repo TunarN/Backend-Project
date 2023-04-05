@@ -23,16 +23,17 @@ namespace Backend_Project.Controllers
         public IActionResult Detail(int id)
         {
             if (id == null) return NotFound();
-            Event events = _appDbContext.Events.Include(e=>e.EventSpeakers).ThenInclude(m=>m.Speakar).FirstOrDefault(e=>e.Id==id);
+            Event even = _appDbContext.Events.Include(e=>e.EventSpeakers).ThenInclude(m=>m.Speakar).FirstOrDefault(e=>e.Id==id);
             var category = _appDbContext.Categories.ToList();
             EventDetailVM eventDetailVM = new();
-            eventDetailVM.EventImageUrl = events.ImageUrl;
-            eventDetailVM.EventName= events.EventName;
-            eventDetailVM.EventDesc = events.EventDesc;
-            eventDetailVM.EventDateTime = events.EventDateTime;
-            eventDetailVM.StartTime= events.StartTime;
-            eventDetailVM.EndTime= events.EndTime;
-            eventDetailVM.Venue=events.Venue;
+            eventDetailVM.EventImageUrl = even.ImageUrl;
+            eventDetailVM.EventName= even.EventName;
+            eventDetailVM.EventDesc = even.EventDesc;
+            eventDetailVM.EventDateTime = even.EventDateTime;
+            eventDetailVM.StartTime= even.StartTime;
+            eventDetailVM.EndTime= even.EndTime;
+            eventDetailVM.Venue= even.Venue;
+            eventDetailVM.even = even;
 
             List<string> categoryNames = new();
             foreach (var item in category)

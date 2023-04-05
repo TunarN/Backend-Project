@@ -33,14 +33,16 @@ namespace Backend_Project.Controllers
                 ViewBag.UserId = user.Id;
             }
             if (id == null) return NotFound();
-            var blog = _appDbContext.Blogs.Include(b => b.Comments).FirstOrDefault(b => b.Id == id);
+            Blog blog = _appDbContext.Blogs.Include(b => b.Comments).FirstOrDefault(b => b.Id == id);
             var category = _appDbContext.Categories.ToList();
             if (blog == null) return NotFound();
             BlogDetailVM blogDetailVM = new();
-            blogDetailVM.ImageUrl= blog.ImageUrl;
-            blogDetailVM.DateTime=blog.DateTime;
-            blogDetailVM.BlogTitle=blog.BlogTitle;
-            blogDetailVM.BlogDesc=blog.BlogDesc;
+            blogDetailVM.ImageUrl = blog.ImageUrl;
+            blogDetailVM.DateTime = blog.DateTime;
+            blogDetailVM.BlogTitle = blog.BlogTitle;
+            blogDetailVM.BlogDesc = blog.BlogDesc;
+            blogDetailVM.Blog = blog;
+
             List<string> categoryNames = new();
             foreach (var item in category)
             {
