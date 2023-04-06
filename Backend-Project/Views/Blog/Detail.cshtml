@@ -4,6 +4,8 @@
     ViewData["Title"] = "Detail";
 }
 
+
+
 <!-- Banner Area Start -->
 <div class="banner-area-wrapper">
     <div class="banner-area text-center">
@@ -36,7 +38,7 @@
                         <p>@Model.BlogDesc</p>
                     </div>
                     <div class="comment-section section-padding">
-                        <h5></h5>
+                        <h5>@Model.Blog.Comments.Count Comment</h5>
                         <ul>
                             @foreach (var item in Model.Blog.Comments)
                             {

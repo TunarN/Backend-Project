@@ -3,7 +3,9 @@ using Backend_Project.Models;
 using Backend_Project.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace Backend_Project.Controllers
 {
@@ -17,10 +19,24 @@ namespace Backend_Project.Controllers
             _userManager = userManager;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page=1,int take=3)
         {
-            List<Blog> blogs = _appDbContext.Blogs.ToList();
-            return View(blogs);
+            var query = _appDbContext.Blogs
+               .Include(q => q.Comments);
+
+            var blogs = query.Skip((page - 1) * take)
+                .Take(take)
+                .ToList();
+            int pageCount = CalculatePageCount(query, take);
+            PaginationVM<Blog> pagination = new(blogs, pageCount, page);
+
+
+            return View(pagination);
+        }
+
+        private int CalculatePageCount(IIncludableQueryable<Blog,List<Comment>>query,int take)
+        {
+            return (int)Math.Ceiling((decimal)(query.Count())/take);
         }
 
         public async Task<IActionResult> Detail(int id)

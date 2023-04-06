@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 
 namespace Backend_Project.Areas.AdminArea.Controllers
 {
+    [Area("AdminArea")]
     public class EventController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -19,7 +20,7 @@ namespace Backend_Project.Areas.AdminArea.Controllers
             _env = env;
         }
 
-        public IActionResult Index()
+        public IActionResult AdminIndex()
         {
             EventVM eventVM = new();
             eventVM.Events = _appDbContext.Events.ToList();

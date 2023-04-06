@@ -1,7 +1,9 @@
-﻿@model List<Blog>
+﻿@model PaginationVM<Blog>
 @{
     ViewData["Title"] = "Index";
 }
+
+
 
 <!-- Banner Area Start -->
 <div class="banner-area-wrapper">
@@ -24,7 +26,7 @@
 <div class="blog-area pt-150 pb-150">
     <div class="container">
         <div class="row">
-            @foreach (var item in Model)
+            @foreach (var item in Model.Items)
             {
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -52,9 +54,12 @@
             <div class="col-xs-12">
                 <div class="pagination">
                     <ul>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                        @for (int i = 1; i <= Model.PageCount; i++)
+                        {
+                            <li class="page-item @(Model.CurrentPage==i?"disabled":"")">
+                                <a class="page-link" asp-action="index" asp-route-page="@i" tabindex="-1">@i</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
