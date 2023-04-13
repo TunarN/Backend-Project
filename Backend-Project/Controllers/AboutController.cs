@@ -18,6 +18,7 @@ namespace Backend_Project.Controllers
         {
            AboutVM aboutVM= new();
             aboutVM.Teachers = _appDbContext.Teachers.Take(4).ToList();
+            aboutVM.Notices=_appDbContext.Notices.ToList();
 
             return View(aboutVM);
         }

@@ -5,6 +5,7 @@ using Backend_Project.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 
 namespace Backend_Project.Areas.AdminArea.Controllers
 {
@@ -98,6 +99,83 @@ namespace Backend_Project.Areas.AdminArea.Controllers
 
             _appDbContext.Courses.Remove(course);
             _appDbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Categories = new SelectList(_appDbContext.Categories.ToList(), "Id", "CategoryName");
+            if (id == null) return NotFound();
+            Course course = _appDbContext.Courses.SingleOrDefault(c => c.Id == id);
+            if (course == null) return NotFound();
+            return View(new CourseUpdateVM
+            
+            { ImageUrl = course.ImageUrl,
+                Name = course.Name ,
+                NameDesc=course.NameDesc,
+                StartDate= course.StartDate ,
+                Month=course.Month ,
+                DurationHour=course.DurationHour ,
+                SkillLevel=course.SkillLevel ,
+                Language=course.Language ,
+                StudentsCount=course.StudentsCount ,
+                Assesment=course.Assesment ,
+                Fee=course.Fee ,
+                CourseDesc=course.CourseDesc ,
+                AboutCourse=course.AboutCourse ,
+                Apply=course.Apply ,
+                Certification=course.Certification ,
+                CategoryId=course.CategoryId ,
+            });
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, CourseUpdateVM updateVM)
+        {
+            ViewBag.Categories = new SelectList(_appDbContext.Categories.ToList(), "Id", "CategoryName");
+            if (id == null) return NotFound();
+            Course course = _appDbContext.Courses.SingleOrDefault(c => c.Id == id);
+            if (course == null) return NotFound();
+            if (updateVM.Photo != null)
+            {
+                if (!updateVM.Photo.IsImage())
+                {
+                    ModelState.AddModelError("Photo", "Please input only Image");
+                    return View();
+                }
+                if (updateVM.Photo.CheckSize(500))
+                {
+                    ModelState.AddModelError("Photo", "Photo size is Large");
+                    return View();
+                }
+
+
+                string fullPath = Path.Combine(_env.WebRootPath, "img/course", course.ImageUrl);
+                if (System.IO.File.Exists(fullPath))
+                {
+
+                    System.IO.File.Delete(fullPath);
+
+                }
+
+                course.ImageUrl = updateVM.Photo.SaveImage(_env, "img/course", updateVM.Photo.FileName);
+                course.Name = updateVM.Name;
+                course.NameDesc = updateVM.NameDesc;
+                course.StartDate = updateVM.StartDate;
+                course.Month = updateVM.Month;
+                course.DurationHour = updateVM.DurationHour;
+                course.SkillLevel = updateVM.SkillLevel;
+                course.Language = updateVM.Language;
+                course.StudentsCount = updateVM.StudentsCount;
+                course.Fee = updateVM.Fee;
+                course.CourseDesc = updateVM.CourseDesc;
+                course.AboutCourse = updateVM.AboutCourse; ;
+                course.Apply = updateVM.Apply;
+                course.Certification = updateVM.Certification; ;
+                course.CategoryId = updateVM.CategoryId;
+
+                _appDbContext.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
     }

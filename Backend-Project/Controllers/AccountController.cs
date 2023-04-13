@@ -51,58 +51,58 @@ namespace Backend_Project.Areas.AdminArea.Controllers
                 return View(register);
             }
 
-            //    string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            //string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
-            //    string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, token },
-            //        Request.Scheme, Request.Host.ToString());
+            //string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, token },
+            //    Request.Scheme, Request.Host.ToString());
 
-            //    var email = new MimeMessage();
-            //    email.From.Add(MailboxAddress.Parse("tunarnv05@gmail.com"));
-            //    email.To.Add(MailboxAddress.Parse(user.Email));
-            //    email.Subject = "Verify Email";
+            //var email = new MimeMessage();
+            //email.From.Add(MailboxAddress.Parse("tunarnv05@gmail.com"));
+            //email.To.Add(MailboxAddress.Parse(user.Email));
+            //email.Subject = "Verify Email";
 
-            //    string body = string.Empty;
-            //    using (StreamReader reader = new StreamReader("wwwroot/Template/Verify.html"))
-            //    {
-            //        body = reader.ReadToEnd();
-            //    }
-
-            //    body = body.Replace("{{link}}", link);
-            //    body = body.Replace("{{Fullname}}", user.FullName);
-
-            //    email.Body = new TextPart(TextFormat.Html) { Text = body };
-
-            //    // send email
-            //    using var smtp = new SmtpClient();
-            //    smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            //    smtp.Authenticate("tunarnv05@gmail.com", "jdzvbogzmmfvkkis");
-            //    smtp.Send(email);
-            //    smtp.Disconnect(true);
-
-            //    await _userManager.AddToRoleAsync(user, RoleEnums.admin.ToString());
-
-            //    return RedirectToAction(nameof(VerifyEmail));
-
-
-
+            //string body = string.Empty;
+            //using (StreamReader reader = new StreamReader("wwwroot/Template/Verify.html"))
+            //{
+            //    body = reader.ReadToEnd();
             //}
 
-            //public async Task<IActionResult> ConfirmEmail(string userId, string token)
-            //{
-            //    if (userId == null || token == null) return NotFound();
+            //body = body.Replace("{{link}}", link);
+            //body = body.Replace("{{Fullname}}", user.FullName);
 
-            //    AppUser user = await _userManager.FindByIdAsync(userId);
+            //email.Body = new TextPart(TextFormat.Html) { Text = body };
 
-            //    if (user == null) return NotFound();
-
-            //    await _userManager.ConfirmEmailAsync(user, token);
+            //// send email
+            //using var smtp = new SmtpClient();
+            //smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+            //smtp.Authenticate("tunarnv05@gmail.com", "jdzvbogzmmfvkkis");
+            //smtp.Send(email);
+            //smtp.Disconnect(true);
 
             await _userManager.AddToRoleAsync(user, RoleEnums.admin.ToString());
-            await _signInManager.SignInAsync(user, false);
 
             return RedirectToAction(nameof(Login));
-            //}
+
+
+
         }
+
+        //public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        //{
+        //    if (userId == null || token == null) return NotFound();
+
+        //    AppUser user = await _userManager.FindByIdAsync(userId);
+
+        //    if (user == null) return NotFound();
+
+        //    await _userManager.ConfirmEmailAsync(user, token);
+
+        //    await _userManager.AddToRoleAsync(user, RoleEnums.admin.ToString());
+        //    await _signInManager.SignInAsync(user, false);
+
+        //    return RedirectToAction(nameof(Login));
+        //    //}
+        //}
         public IActionResult VerifyEmail()
         {
             return View();

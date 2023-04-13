@@ -9,5 +9,6 @@ namespace Backend_Project.ViewModels
         public List<EduHome> EduHomes { get; set; }
         public List<Course> Courses { get; set; }
         public List<Blog> Blogs { get; set; }
+        public List<Event> Events { get; set; }
     }
 }

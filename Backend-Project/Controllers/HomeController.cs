@@ -23,6 +23,7 @@ namespace Backend_Project.Controllers
             homeVM.EduHomes = _appDbContext.EduHomes.ToList();
             homeVM.Courses = _appDbContext.Courses.Take(3).ToList();
             homeVM.Blogs = _appDbContext.Blogs.Take(3).ToList();
+            homeVM.Events=_appDbContext.Events.Take(4).ToList();
             return View(homeVM);
         }
 
